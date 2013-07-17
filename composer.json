@@ -1,0 +1,31 @@
+{
+	"name": "mishak/newrelic-logger",
+	"type": "library",
+	"description": "Tighter integration of logging to New Relic for Nette Framework",
+	"keywords": ["nette", "newrelic", "new relic", "logger"],
+	"license": ["BSD-3-Clause", "GPL-2.0", "GPL-3.0"],
+	"authors": [
+		{
+			"name": "Filip Procházka",
+			"homepage": "http://filip-prochazka.com"
+		},
+		{
+			"name": "Michal Gebauer",
+			"homepage": "http://mishak.net"
+		}
+	],
+	"support": {
+		"email": "mishak@mishak.net",
+		"issues": "https://github.com/mishak87/newrelic-nette/issues"
+	},
+	"require": {
+		"php": ">=5.3.2",
+		"nette/nette": "@dev",
+		"kdyby/events": "@dev"
+	},
+	"autoload": {
+		"psr-0": {
+			"Mishak\\NewRelicLogger\\": "src/"
+		}
+	}
+}
