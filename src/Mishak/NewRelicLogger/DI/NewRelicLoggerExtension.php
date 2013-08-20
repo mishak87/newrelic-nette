@@ -6,7 +6,7 @@ use Kdyby;
 use Nette;
 
 
-class NewRelicLoggerExtension extends Nette\DI\CompilerExtension
+class NewRelicLoggerExtension extends Nette\Config\CompilerExtension
 {
 
 	public function loadConfiguration()
@@ -27,7 +27,7 @@ class NewRelicLoggerExtension extends Nette\DI\CompilerExtension
 	}
 
 
-	public static function register(Nette\Configurator $configurator)
+	public static function register(Nette\Config\Configurator $configurator)
 	{
 		$configurator->onCompile[] = function ($config, Nette\DI\Compiler $compiler) {
 			$compiler->addExtension('newRelic', new NewRelicLoggerExtension);

@@ -28,13 +28,12 @@ class NewRelicProfilingListener extends Nette\Object implements Kdyby\Events\Sub
 			return;
 		}
 
-		$oldLogger = Debugger::getLogger();
+		$oldLogger = Debugger::$logger;
 		$logger = new Logger;
-		$logger->emailSnooze = $oldLogger->emailSnooze;
 		$logger->mailer = $oldLogger->mailer;
 		$logger->directory = $oldLogger->directory;
 		$logger->email = $oldLogger->email;
-		Debugger::setLogger($logger);
+		Debugger::$logger = $logger;
 	}
 
 
